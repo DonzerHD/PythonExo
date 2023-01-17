@@ -14,6 +14,6 @@ def min_divide(ma_liste,y):
 def pick_a_letter(word):
     return word[rd.randint(0,len(word)-1)]
 
-def create_file(file_path,content):
+def write_file(file_path,content):
     with open(file_path, "w") as fichier:
         fichier.write(content)

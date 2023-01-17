@@ -1,6 +1,6 @@
 import unittest
 import os
-from exercice_test import multiply_by_42_then_pow, min_divide , pick_a_letter , create_file
+from exercice_test import multiply_by_42_then_pow, min_divide , pick_a_letter , write_file
 
 class TestAddWithUnittest(unittest.TestCase):
        
@@ -21,18 +21,17 @@ class TestAddWithUnittest(unittest.TestCase):
          with self.assertRaises(TypeError):
             min_divide(list2, 0)
             
-    def test_min_divide(self):
+    def test_pick_a_letter(self):
          self.assertIsInstance(pick_a_letter("thomas"), str)
          with self.assertRaises(TypeError):
             pick_a_letter(3343)
             
-    def test_create_file(self):
-        create_file("test.txt","cc")
+    def test_write_file(self):
+        write_file("test.txt","cc")
         self.assertTrue(os.path.exists("test.txt")) # vérifie si le fichier a été créé
-        with open("test.txt", "r") as f:
-            content = f.read()
+        with open("test.txt", "r") as fichier:
+            content = fichier.read()
             self.assertEqual(content, "cc") # vérifie si le contenu du fichier est celui attendu
-    os.remove("test.txt") # supprime le fichier créé après le test pour éviter les conflits de nom
          
      
          
