@@ -1,7 +1,7 @@
 import unittest
 from a_tester import add, fois
 
-class TestAddWithUnittest(unittest.TestCase):
+class TestTest(unittest.TestCase):
 
     def test_add(self):
         self.assertEqual(add(3,4), 7)
@@ -13,4 +13,4 @@ class TestAddWithUnittest(unittest.TestCase):
         self.assertEqual(fois('a',2), 'aa')
         with self.assertRaises(TypeError):
             fois('a' * 'a')
-        self.assertEqual(fois('a',-2), ' ')
+        self.assertEqual(fois('a',-4), '')

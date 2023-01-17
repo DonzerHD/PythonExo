@@ -17,4 +17,3 @@ def pick_a_letter(word):
 def create_file(file_path,content):
     with open(file_path, "w") as fichier:
         fichier.write(content)
-
