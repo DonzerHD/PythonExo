@@ -4,6 +4,7 @@ import turtle
 # Ils sont ici pour permettre aux développeur de garder leur code compréhensible 
 # (pour eux même ou pour les autres)
 
+
 turtle.speed(8) # permet de régler la vitesse d'animation de la tortue (1 étant le plus lent, 10 le plus rapide)
 
 # Début des instructions permettant de dessiner : insérer votre code ici !
