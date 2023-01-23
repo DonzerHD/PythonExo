@@ -4,7 +4,19 @@
 # -SePresenter
 # -DemanderNom (input)
 
-class Personne:
+class EtreVivant:
+    ESPECE_ETRE_VIVANT = '(Etre vivant non identifié)'
+    
+    def AfficherInfosEtreVivant(self):
+        print("Info être vivant : " + self.ESPECE_ETRE_VIVANT)
+
+class Chat(EtreVivant):
+    ESPECE_ETRE_VIVANT = "Chat (Mammifère félin)"
+    
+class Personne(EtreVivant):
+    ESPECE_ETRE_VIVANT = "Humain (Mammifère Homo sapiens)"
+    #Variable de classe
+    
     def __init__(self, nom :str = "", age :int = 0):
         self.nom = nom #crée une variable d'instance : nom
         self.age = age
@@ -27,6 +39,15 @@ class Personne:
     
     def DemanderNom(self):
         self.nom = input("Quel est ton nom ?")
+        
+class Etudiant(Personne):
+   def __init__(self, nom: str , age: int , etudes :str):
+       super().__init__(nom, age)
+       self.etudes = etudes
+       
+   def SePresenter(self):
+        super().SePresenter()
+        print("Je suis etudiant en " + self.etudes)
        
 # --- UTILISATION ---
 
@@ -36,24 +57,15 @@ liste_personnes = [Personne("Thomas" , 22),
 
 for personne in liste_personnes:
     personne.SePresenter()
-
-
-
-""" def afficher_information_personne(nom , age):
-    print(f"La personne s'appelle {nom} et son age est {age} ans")
+    personne.AfficherInfosEtreVivant()
+    print()
     
-def demander_nom_personne():
-    nom = input("Quel est votre nom ?")  
-    return nom
-    
-nom1 = "Jean"
-age1 = 31
+chat = Chat()
+chat.AfficherInfosEtreVivant()
+etreVivant = EtreVivant()
+etreVivant.AfficherInfosEtreVivant()
 
-nom2 = "Thomas"
-age2 = 23
+etudiant = Etudiant("Kevin" , 23 , 'Informaticien')
+etudiant.AfficherInfosEtreVivant()
+etudiant.SePresenter()
 
-afficher_information_personne(nom1 , age1)
-afficher_information_personne(nom2 , age2)
-
-nom3 = demander_nom_personne()
-afficher_information_personne(nom3, age2) """
