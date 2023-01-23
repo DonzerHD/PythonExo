@@ -4,11 +4,6 @@
 # -SePresenter
 # -DemanderNom (input)
 
-# --- DEFINITION ---
-#Si age == 0 => Bonjour , je m'appelle Toto
-#            => On affiche pas mineur
-#            => Demander nom a l'utilisateur
-#            => DemanderNom(...)   - > input("")  -> nom
 class Personne:
     def __init__(self, nom :str = "", age :int = 0):
         self.nom = nom #crée une variable d'instance : nom
@@ -35,16 +30,12 @@ class Personne:
        
 # --- UTILISATION ---
 
-personne1 = Personne("Thomas" , 22) #Je cree une personne
-personne2 = Personne("Paul", 12)
+liste_personnes = [Personne("Thomas" , 22), 
+                   Personne("Paul", 12), 
+                   Personne("Paola", 48)]
 
-personne3 = Personne()
-personne4 = Personne(age=22)
-
-personne1.SePresenter()
-personne2.SePresenter()
-personne3.SePresenter()
-personne4.SePresenter()
+for personne in liste_personnes:
+    personne.SePresenter()
 
 
 

@@ -10,14 +10,8 @@ class Personne:
 
 # ---
 noms = []
-noms.append(input("nom de la personne 1 : "))
-noms.append(input("nom de la personne 2 : "))
-noms.append(input("nom de la personne 3 : "))
-
-l = []
+for i in range(3):
+    noms.append(Personne(input(f"nom de la personne {i+1} : ")))
 
 for nom in noms:
-    l.append(Personne(nom))
-
-for p in l:
-    print(p.SePresenter())
+    nom.SePresenter()
