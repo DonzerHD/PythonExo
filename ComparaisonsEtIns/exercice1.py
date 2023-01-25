@@ -5,3 +5,4 @@ if nbUtilisateur % 2 == 0:
 else:
     print("Votre nombre est impaire")
     
+    
