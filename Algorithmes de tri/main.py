@@ -13,4 +13,4 @@ def tri_par_insertion(l):
             
 l = [5,3,2,7]
 tri_par_insertion(l)
-print(l)
+print(l) 
