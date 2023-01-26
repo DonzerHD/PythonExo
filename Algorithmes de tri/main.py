@@ -7,8 +7,8 @@ def tri_par_insertion(l):
         print(f"i = {i} , cle = {cle} , j = {j}")
         while j>=0 and cle < l[j]:
             print(f"l[j] = {l[j]}")
-            l[j+1] = l[j]
-            j -= 1
+            l[j+1] = l[j] 
+            j -= 1 
         l[j+1] = cle
             
 l = [5,3,2,7]
